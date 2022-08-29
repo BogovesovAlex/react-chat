@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import { useDispatch } from 'react-redux';
-
 import { ReactComponent as PaperPlane } from '../../image/paper-plane.svg';
 import axios from 'axios';
 
@@ -39,11 +38,6 @@ const ChatInput = props => {
         !(props.userData.active === false) && setTimeout(() => {
             getRandomMessage().then(data => addMessage(data.data.value, false))
         }, Math.random() * 1000 + 5000);
-
-        window.scrollTo({
-            top: document.body.scrollHeight,
-            behavior: "smooth"
-        });
     };
 
     return (

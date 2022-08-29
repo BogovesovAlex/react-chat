@@ -11,7 +11,7 @@ const messageReducer = (state = data, action) => {
         case 'ADD_MESSAGE':
             state.find(item => item.id === action.id).messages.push(action.payload)
             localStorage.setItem('data', JSON.stringify(state));
-            return [...state] 
+            return [...state]
         default:
             return state
     }
