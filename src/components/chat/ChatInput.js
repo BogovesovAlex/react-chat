@@ -20,7 +20,7 @@ const ChatInput = props => {
 
         const enteredMessage = messageInputRef.current.value;
 
-        if (enteredMessage === '') return
+        if (enteredMessage.trim() === '') return
 
         const addMessage = (message, mymessage) => {
             const messages = {
@@ -39,6 +39,11 @@ const ChatInput = props => {
         !(props.userData.active === false) && setTimeout(() => {
             getRandomMessage().then(data => addMessage(data.data.value, false))
         }, Math.random() * 1000 + 5000);
+
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth"
+        });
     };
 
     return (

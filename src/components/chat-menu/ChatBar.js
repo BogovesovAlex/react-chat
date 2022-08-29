@@ -8,12 +8,10 @@ import classes from './ChatBar.module.css';
 
 const ChatBar = props => {
     const users = useSelector(state => state);
-    
+
     const [filteredName, setFilteredName] = useState('');
 
-    const userNewDate = JSON.parse(localStorage.getItem('data'));
-
-    const sortedUsers = (userNewDate === null ? users : userNewDate)
+    const sortedUsers = users
         .sort((a, b) => b.messages[b.messages.length - 1].date - a.messages[a.messages.length - 1].date);
 
     const filteredUserName = value => setFilteredName(value.toLowerCase());

@@ -10,7 +10,7 @@ const BarHeader = props => {
     const nameChangeHandler = event => setenteredName(event.target.value);
     
     useEffect(() => {
-        props.onFilteredUser(enteredName)
+        props.onFilteredUser(enteredName.trim())
     }, [enteredName, props])
 
     return (
