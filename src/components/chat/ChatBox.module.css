@@ -1,0 +1,6 @@
+.box {
+  width: 70%;
+  background: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+}

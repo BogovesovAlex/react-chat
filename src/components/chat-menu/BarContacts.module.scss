@@ -1,0 +1,56 @@
+.contacts {
+  height: 100%;
+}
+
+.user {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  cursor: pointer;
+  border-bottom: 1px solid rgb(150, 150, 150);
+  position: relative;
+
+  img {
+    width: 46px;
+    border-radius: 50%;
+  }
+}
+
+.date {
+  font-size: 8px;
+  position: absolute;
+  top: 20px;
+  right: 6px;
+}
+
+.userMessageWrapp {
+  display: flex;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 6px;
+  }
+
+  svg {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    bottom: 16px;
+    left: 48px;
+  }
+}
+
+.name {
+  font-size: 12px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  color: rgb(128, 128, 128);
+}
+
+.message {
+  font-size: 10px;
+  color: rgb(199, 199, 199);
+  height: 20px;
+  overflow: hidden;
+}

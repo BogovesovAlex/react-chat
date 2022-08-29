@@ -1,0 +1,36 @@
+.input {
+  padding: 1rem;
+  width: 100%;
+  max-width: 40rem;
+  background: rgb(241, 241, 241);
+  border-top: 1px solid rgb(150, 150, 150);
+  position: relative;
+
+  input {
+    font: inherit;
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    border-radius: 1rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    position: absolute;
+    right: 17px;
+    top: 39px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

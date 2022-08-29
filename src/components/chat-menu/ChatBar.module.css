@@ -1,0 +1,8 @@
+.bar {
+    background: rgb(255, 255, 255);
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgb(150, 150, 150);
+}
