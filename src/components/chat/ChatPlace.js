@@ -5,12 +5,13 @@ import classes from './ChatPlace.module.scss';
 const ChatPlace = props => {
   const scrollRef = useRef();
   const scrollBox = useRef();
+
   const date = dateMessage => new Date(dateMessage).toLocaleString("en-US", { dateStyle: 'short', timeStyle: 'short' });
 
   useEffect(() => {
     scrollRef.current?.scrollIntoView({ behavior: 'smooth' })
     scrollBox.current?.scrollTo(0, scrollBox.current?.scrollHeight);
-  })
+  }) 
 
   return (
     <div className={classes.place} ref={scrollBox}>
