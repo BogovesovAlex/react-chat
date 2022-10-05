@@ -1,17 +1,31 @@
 import { createStore } from 'redux';
 
-import contacts from "../components/data/data";
+import contacts from "../data/data";
 
 const userNewDate = JSON.parse(localStorage.getItem('data'));
 
 const data = userNewDate === null ? contacts : userNewDate;
 
-const messageReducer = (state = data, action) => {
+const initialState = {
+    users: data
+};
+
+const messageReducer = (state = initialState, action) => {
+    console.log(state)
     switch (action.type) {
         case 'ADD_MESSAGE':
-            state.find(item => item.id === action.id).messages.push(action.payload)
-            localStorage.setItem('data', JSON.stringify(state));
-            return [...state]
+            return {
+                ...state,
+                users: state.users.map(user => {
+                    if (user.id === action.id) {
+                        return {
+                            ...user,
+                            messages: [...user.messages, action.payload]
+                        }
+                    }
+                    return user;
+                })
+            }
         default:
             return state
     }

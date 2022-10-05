@@ -8,7 +8,9 @@ import classes from './ChatBox.module.css'
 
 
 const ChatBox = props => {
-    const users = useSelector(state => state)
+    const users = useSelector(state => state.users)
+
+    localStorage.setItem('data', JSON.stringify(users));
 
     const selectedUserData = users.find(item => item.id === props.id);
 

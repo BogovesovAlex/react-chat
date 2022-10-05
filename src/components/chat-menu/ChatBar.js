@@ -6,7 +6,8 @@ import { useSelector } from 'react-redux';
 import classes from './ChatBar.module.css';
 
 const ChatBar = props => {
-    const users = useSelector(state => state);
+    const users = useSelector(state => state.users);
+    console.log('user', users)
 
     const [filteredName, setFilteredName] = useState('');
 

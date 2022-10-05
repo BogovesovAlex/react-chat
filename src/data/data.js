@@ -1,6 +1,6 @@
-import fotoAlice from '../../image/alice.jpg'
-import fotoBarella from '../../image/barella.jpeg'
-import fotoJosefina from '../../image/josefina.jpg'
+import fotoAlice from '../image/alice.jpg'
+import fotoBarella from '../image/barella.jpeg'
+import fotoJosefina from '../image/josefina.jpg'
 
 const contacts = [
   {
